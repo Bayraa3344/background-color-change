@@ -14,3 +14,7 @@ function changeInpColor() {
 
   console.log(colors);
 }
+
+function goBack() {
+  window.history.back();
+}
