@@ -1,5 +1,6 @@
-let colors = ["red", "gray", "blue", "yellow"];
-i = 0;
+var colors = ["red", "gray", "blue", "yellow"];
+var newColor = document.getElementById("inp");
+var i = 0;
 function changeColor() {
   document.body.style.backgroundColor = colors[i];
   i++;
@@ -8,14 +9,16 @@ function changeColor() {
   }
 }
 function changeInpColor() {
-  var newColor = document.getElementById("inp").value;
-  document.body.style.backgroundColor = newColor;
-  if (document.body.style.backgroundColor === newColor) {
-    colors.push(newColor);
+  document.body.style.backgroundColor = newColor.value;
+  if (newColor.value != "") {
+    if (document.body.style.backgroundColor == newColor.value) {
+      colors.push(newColor.value);
+    }
   } else {
     alert("Буруу өнгөний утга оруулсан байна.");
   }
 
+  console.log(newColor.value);
   console.log(colors);
 }
 
