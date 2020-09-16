@@ -10,7 +10,11 @@ function changeColor() {
 function changeInpColor() {
   var newColor = document.getElementById("inp").value;
   document.body.style.backgroundColor = newColor;
-  colors.push(newColor);
+  if (document.body.style.backgroundColor === newColor) {
+    colors.push(newColor);
+  } else {
+    alert("Буруу өнгөний утга оруулсан байна.");
+  }
 
   console.log(colors);
 }
