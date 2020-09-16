@@ -15,7 +15,7 @@ function changeInpColor() {
       colors.push(newColor.value);
     }
   } else {
-    alert("Буруу өнгөний утга оруулсан байна.");
+    alert("хоосон байна.");
   }
 
   console.log(newColor.value);
